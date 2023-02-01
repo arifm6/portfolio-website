@@ -15,7 +15,7 @@ export default function ExperienceCard({}: Props) {
         src="./mememan.jpeg"
         alt=""
       />
-      <div className=" w-[80%] sm:w-[85%] space-y-2 h-[calc(65vh_-_7rem)] overflow-scroll">
+      <div className=" w-[80%] sm:w-[85%] space-y-2 h-[calc(65vh_-_7rem)] overflow-auto">
         <h4 className="text-xl sm:text-4xl font-light">Job Title</h4>
         <p className="text-lg font-bold sm:text-2xl">Company Name</p>
         <div className="flex space-x-2">
