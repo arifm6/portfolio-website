@@ -9,3 +9,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+@layer components {
+  .heroButton {
+    @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all hover:border-[#FFE55C]/40 hover:text-[#FFE55C]/40;
+  }
+}
