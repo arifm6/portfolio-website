@@ -7,7 +7,7 @@ export default function Projects({}: Props) {
   return (
     <article className="relative h-screen pt-20 overflow-hidden">
       <h3 className="sectionHeading ">Projects</h3>
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 h-[calc(100vh_-_8rem)] ">
+      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 h-[calc(100vh_-_8rem)] scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 ">
         <Project />
         <Project />
         <Project />

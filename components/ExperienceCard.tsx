@@ -5,7 +5,7 @@ type Props = {};
 
 export default function ExperienceCard({}: Props) {
   return (
-    <div className="w-screen h-[65vh] flex flex-col rounded-lg items-center flex-shrink-0 sm:w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 pt-4 space-y-4 overflow-hidden">
+    <div className="w-screen h-[calc(100vh_-_13rem)] flex flex-col rounded-lg items-center flex-shrink-0 sm:w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 pt-4 space-y-4 overflow-hidden">
       <motion.img
         initial={{ y: -100, opacity: 0 }}
         transition={{ duration: 1.25 }}
@@ -15,7 +15,7 @@ export default function ExperienceCard({}: Props) {
         src="./mememan.jpeg"
         alt=""
       />
-      <div className=" w-[80%] sm:w-[85%] space-y-2 h-[calc(65vh_-_7rem)] overflow-auto">
+      <div className=" w-[80%] sm:w-[85%] space-y-2 h-[calc(65vh_-_6.5rem)] overflow-y-auto scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
         <h4 className="text-xl sm:text-4xl font-light">Job Title</h4>
         <p className="text-lg font-bold sm:text-2xl">Company Name</p>
         <div className="flex space-x-2">
