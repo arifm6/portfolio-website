@@ -19,8 +19,8 @@ export default function Hero({}: Props) {
       <BackgroundCircles />
       <img
         className="relative rounded-full w-32 h-32 mx-auto object-cover"
-        src="./mememan.jpeg"
-        alt=""
+        src="./ahmad-arif-headshot.png"
+        alt="ahmad arif's headshot"
       />
 
       <div className="space-y-4 z-20 ">
