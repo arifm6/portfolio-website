@@ -27,7 +27,7 @@ export default function About({}: Props) {
         <div className="space-y-4  md:px-10 w-full px-4 overflow-y-auto h-[calc(100vh_-_26rem)] text-center md:text-left md:h-auto scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 ">
           <h4 className="text-4xl font-semibold">Here is a background of me</h4>
           <p className="text-base">
-            I'm{" "}
+            I&apos;m{" "}
             <span className="underline decoration-[#FFE55C]/50 name-hover cursor-pointer">
               Ahmad
             </span>
