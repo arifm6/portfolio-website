@@ -41,7 +41,8 @@ export default function About({}: Props) {
             </span>
             <span className="phonetic-name text-[#F7AB0A]">
               {" "}
-              &nbsp; &#40;Pronounced "Ma-Sea" or "Ma-Seeh"&#41;
+              &nbsp; &#40;Pronounced &quot;Ma-Sea&quot; or
+              &quot;Ma-Seeh&quot;&#41;
             </span>
             . I am a software developer that recently graduated from McMaster
             University{" "}
