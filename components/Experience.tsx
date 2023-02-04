@@ -70,6 +70,7 @@ export default function Experience({}: Props) {
               tools={experience.tools}
               jobDate={experience.jobDate}
               jobTitle={experience.jobTitle}
+              jobDuties={experience.jobDuties}
             />
           );
         })}
