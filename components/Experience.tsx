@@ -27,11 +27,16 @@ export default function Experience({}: Props) {
       companyLogo: "./alconcrete-logo.png",
       jobTitle: "Web Developer",
       tools: [
-        <FaReact className="h-14 w-14 text-[#61DBFB]" />,
-        <SiNextdotjs color="black" className="h-14 w-14" fill="white" />,
-        <SiTailwindcss color="#38bdf8" className="h-14 w-14" />,
-        <FaGithub className="h-14 w-14" />,
-        <SiPhp className="h-14  w-14" color="#8993be" />,
+        <FaReact className="h-14 w-14 text-[#61DBFB]" key={0} />,
+        <SiNextdotjs
+          color="black"
+          className="h-14 w-14"
+          fill="white"
+          key={1}
+        />,
+        <SiTailwindcss color="#38bdf8" className="h-14 w-14" key={2} />,
+        <FaGithub className="h-14 w-14" key={3} />,
+        <SiPhp className="h-14  w-14" color="#8993be" key={4} />,
       ],
       jobDate: {
         from:
@@ -50,7 +55,7 @@ export default function Experience({}: Props) {
         "Deployed website landing page and updated and maintained any changes per client request",
       ],
     },
-    { company: "More Coming Soon" },
+    { jobTitle: "More coming soon" },
   ];
   return (
     <article className="h-screen pt-20 overflow-hidden ">
@@ -65,12 +70,9 @@ export default function Experience({}: Props) {
               tools={experience.tools}
               jobDate={experience.jobDate}
               jobTitle={experience.jobTitle}
-              jobDuties={experience.jobDuties}
             />
           );
         })}
-        {/**<ExperienceCard companyLogo="./alconcrete-logo.png" />
-        <ExperienceCard />*/}
       </div>
     </article>
   );
