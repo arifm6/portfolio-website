@@ -33,7 +33,7 @@ export default function About({}: Props) {
             </span>
             <span className="phonetic-name text-[#F7AB0A]">
               {" "}
-              &nbsp; &#40;Pronounced "Aw-mid"&#41;
+              &nbsp; &#40;Pronounced &quot;Aw-mid&quot;&#41;
             </span>
             . Some people know me as{" "}
             <span className="underline decoration-[#FFE55C]/50 name-hover cursor-pointer">
