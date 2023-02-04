@@ -37,8 +37,8 @@ export default function ExperienceCard({
           {jobDate?.from} - {jobDate?.to}
         </p>
         <ul className="flex flex-col list-disc text-lg pl-4 pr-8 space-y-4">
-          {jobDuties?.map((jobDuty) => {
-            return <li>{jobDuty}</li>;
+          {jobDuties?.map((jobDuty, i) => {
+            return <li key={i}>{jobDuty}</li>;
           })}
         </ul>
       </div>
