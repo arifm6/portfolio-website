@@ -20,8 +20,12 @@
   .contactInput {
     @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40 hover:border-[#F7AB0A]/40;
   }
+  .skill-size {
+    @apply w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 xl:w-32 xl:h-32 scale-50;
+  }
+
   .skillIcon {
-    @apply border border-gray-500 rounded-3xl object-scale-down w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out;
+    @apply border border-gray-500 w-full h-full rounded-3xl object-contain  filter group-hover:grayscale transition duration-300 ease-in-out;
   }
 }
 .phonetic-name {
