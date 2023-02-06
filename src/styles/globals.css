@@ -25,7 +25,7 @@
   }
 
   .skillIcon {
-    @apply border border-gray-500 w-full h-full rounded-3xl object-contain  filter group-hover:grayscale transition duration-300 ease-in-out;
+    @apply border border-gray-500 w-full h-full rounded-3xl object-scale-down  filter group-hover:grayscale transition duration-300 ease-in-out;
   }
 }
 .phonetic-name {

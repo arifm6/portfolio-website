@@ -3,7 +3,13 @@ import React from "react";
 import Skill from "./Skill";
 import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
 import { IoLogoCss3, IoLogoJavascript, IoLogoPython } from "react-icons/io";
-import { SiTypescript, SiReact, SiNextdotjs, SiPhp } from "react-icons/si";
+import {
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiPhp,
+  SiAdobephotoshop,
+} from "react-icons/si";
 
 type Props = {};
 
@@ -64,6 +70,10 @@ export default function Skills({}: Props) {
     {
       toolName: "Next.js",
       skillIcon: <SiNextdotjs color="black" className="bg-white" />,
+    },
+    {
+      toolName: "Photoshop",
+      skillIcon: <img src="photoshop-logo.webp" alt="" />,
     },
   ];
   return (

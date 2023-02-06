@@ -11,7 +11,7 @@ export default function Project({}: Props) {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
       viewport={{ once: true }}
-      className="w-screen flex-shrink-0 snap-center flex flex-col space-y-4  items-center justify-center sm:p20 md:p-44"
+      className="w-screen flex-shrink-0 snap-center flex flex-col space-y-4  items-center justify-start sm:px-20 md:px-44 h-full "
     >
       <motion.a
         initial={{ y: -150, opacity: 0 }}
@@ -24,9 +24,9 @@ export default function Project({}: Props) {
         className="group flex items-center justify-center max-w-[80vw] "
       >
         <motion.img
-          src="./mememan.jpeg"
+          src="./amazon-project.png"
           alt=""
-          className="max-h-[40vh] sm:h-[35vh] 2xl:h-[40vh] sm:object-contain"
+          className="max-h-[30vh] md:max-h-[40vh] xl:max-h-[50vh] "
         />
         <h3 className=" absolute scale-0 group-hover:scale-100 p-4 border border-gray-300 rounded-full bg-gray-500 bg-opacity-30 text-3xl duration-200 text-center whitespace-nowrap ">
           Link To Project
