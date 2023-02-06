@@ -55,10 +55,8 @@ export default function Project({
       <div className="flex items-center space-x-4 projectTools ">
         {projectTools}
       </div>
-      <p className="text-sm max-w-[80vw]">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas fuga nam
-        illo enim culpa nemo error voluptatem maiores? Itaque vitae corrupti
-        distinctio aliquid porro dolorem dolor nam rem repellendus libero?
+      <p className="text-sm max-w-[80vw] overflow-scroll scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 ">
+        {projectDescription}
       </p>
     </motion.div>
   );
