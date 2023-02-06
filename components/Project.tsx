@@ -2,9 +2,25 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
 
-type Props = {};
+type Props = {
+  projectDemo: string;
+  projectImage: any;
+  projectNumber: number;
+  numberOfProjects: number;
+  projectName: string;
+  projectTools: any;
+  projectDescription: string;
+};
 
-export default function Project({}: Props) {
+export default function Project({
+  projectDemo,
+  projectImage,
+  projectNumber,
+  numberOfProjects,
+  projectName,
+  projectTools,
+  projectDescription,
+}: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -19,51 +35,25 @@ export default function Project({}: Props) {
         transition={{ duration: 1.5 }}
         viewport={{ once: true }}
         target="_blank"
-        href="https://github.com"
+        href={projectDemo}
         rel="noopener noreferrer"
         className="group flex items-center justify-center max-w-[80vw] "
       >
-        <motion.img
-          src="./amazon-project.png"
-          alt=""
-          className="max-h-[30vh] md:max-h-[40vh] xl:max-h-[50vh] "
-        />
+        <motion.div className="h-[30vh] md:h-[40vh] xl:h-[50vh] ">
+          {projectImage}
+        </motion.div>
         <h3 className=" absolute scale-0 group-hover:scale-100 p-4 border border-gray-300 rounded-full bg-gray-500 bg-opacity-30 text-3xl duration-200 text-center whitespace-nowrap ">
           Link To Project
         </h3>
       </motion.a>
       <h4 className="text-xl sm:text-4xl font-semibold text-center">
         <span className="underline decoration-[#FFE55C]/50">
-          Project 1 of 5:
+          Project {projectNumber} of {numberOfProjects}:
         </span>{" "}
-        Project Name
+        {projectName}
       </h4>
-      <div className="flex items-center space-x-4 ">
-        <img
-          className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 object-cover"
-          src="./mememan.jpeg"
-          alt=""
-        />
-        <img
-          className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 object-cover"
-          src="./mememan.jpeg"
-          alt=""
-        />
-        <img
-          className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 object-cover"
-          src="./mememan.jpeg"
-          alt=""
-        />
-        <img
-          className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 object-cover"
-          src="./mememan.jpeg"
-          alt=""
-        />
-        <img
-          className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 object-cover"
-          src="./mememan.jpeg"
-          alt=""
-        />
+      <div className="flex items-center space-x-4 projectTools ">
+        {projectTools}
       </div>
       <p className="text-sm max-w-[80vw]">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas fuga nam
