@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
 import { FaGithub, FaReact } from "react-icons/fa";
 import ExperienceCard from "./ExperienceCard";
 import { SiNextdotjs, SiPhp, SiTailwindcss } from "react-icons/si";
+import { useInView } from "framer-motion";
 
 type Props = {};
 
 export default function Experience({}: Props) {
+  const experienceRef = useRef(null);
+  const experienceIsInView = useInView(experienceRef, { once: true });
+
   const months = [
     "Jan",
     "Feb",
@@ -57,7 +61,7 @@ export default function Experience({}: Props) {
     },
   ];
   return (
-    <article className="h-screen pt-20 overflow-hidden ">
+    <article className="h-screen pt-20 overflow-hidden" ref={experienceRef}>
       <h3 className="sectionHeading ">Experience</h3>
       <div className=" flex flex-row w-full space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
         {Experiences.map((experience, i) => {
@@ -70,6 +74,7 @@ export default function Experience({}: Props) {
               jobDate={experience.jobDate}
               jobTitle={experience.jobTitle}
               jobDuties={experience.jobDuties}
+              isInView={experienceIsInView}
             />
           );
         })}

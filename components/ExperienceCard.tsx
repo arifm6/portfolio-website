@@ -8,6 +8,7 @@ type Props = {
   jobDate?: any;
   jobTitle?: string;
   jobDuties?: Array<string>;
+  isInView: boolean;
 };
 
 export default function ExperienceCard({
@@ -17,13 +18,14 @@ export default function ExperienceCard({
   jobDate,
   jobTitle,
   jobDuties,
+  isInView,
 }: Props) {
   return (
     <div className="w-screen h-[calc(100vh_-_13rem)] flex flex-col rounded-lg items-center flex-shrink-0 sm:w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 pt-4 space-y-4 overflow-hidden sm:w-[full] md:w-full xl:w-full ">
       <motion.img
         initial={{ y: -100, opacity: 0 }}
         transition={{ duration: 1.25 }}
-        whileInView={{ y: 0, opacity: 1 }}
+        animate={isInView && { y: 0, opacity: 1 }}
         viewport={{ once: true }}
         className="w-24 h-24 sm:w-32 sm:h-32 rounded-full object-fit "
         src={companyLogo || "./mememan.jpeg"}

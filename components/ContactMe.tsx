@@ -31,7 +31,7 @@ export default function ContactMe({}: Props) {
   };
 
   return (
-    <div className="h-screen pt-20 overflow-hidden">
+    <div className="h-screen pt-20 overflow-hidden w-[90%] mx-auto">
       {" "}
       <h3 className="sectionHeading ">Contact</h3>
       <div className="flex flex-col items-center justify-start h-[calc(100vh_-_8rem)] space-y-10 text-center md:text-left max-w-7xl px-10 mx-auto overflow-y-scroll scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">

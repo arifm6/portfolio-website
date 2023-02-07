@@ -41,8 +41,8 @@ export default function Home() {
         <ContactMe />
       </section>
       <Link href="#hero">
-        <footer className="sticky bottom-5 w-full cursor-pointer z-[100] group">
-          <div className="flex items-center justify-center">
+        <footer className="sticky bottom-5 cursor-pointer z-[100] group w-[5rem] mx-auto">
+          <div className="flex items-center justify-center mx-auto ">
             <img
               className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer transition duration-300"
               src="./ahmad-arif-headshot.png  "

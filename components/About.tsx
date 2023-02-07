@@ -20,7 +20,7 @@ export default function About({}: Props) {
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.25 }}
           viewport={{ once: true }}
-          src="./mememan.jpeg"
+          src="./ahmad-arif-cringe-picture.jpg"
           alt=""
           className="w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px]"
         />

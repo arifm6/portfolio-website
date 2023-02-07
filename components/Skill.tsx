@@ -20,7 +20,7 @@ export default function Skill({
       animate={isInView && { x: 0, opacity: 1 }}
       transition={{ duration: 1.5 }}
       viewport={{ once: true }}
-      className="group relative flex cursor-pointer skill-size overflow-hidden"
+      className="group relative flex cursor-pointer skill-size"
     >
       <div className="[&>*]:skillIcon w-full h-full scale-90 group-hover:scale-110 transition-transform duration-300 ease-in-out ">
         {skillIcon}

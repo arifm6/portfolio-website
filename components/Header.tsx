@@ -36,6 +36,7 @@ export default function Header({}: Props) {
           onMouseEnter={() => handleMouseEnter(1)}
           onMouseLeave={() => handleMouseExit()}
         />
+        {/**
         <SocialIcon
           url=""
           fgColor={`${whatIsHovered === 2 ? "#F7AB0A" : "gray"}`}
@@ -43,6 +44,7 @@ export default function Header({}: Props) {
           onMouseEnter={() => handleMouseEnter(2)}
           onMouseLeave={() => handleMouseExit()}
         />
+         */}
       </motion.div>
 
       <motion.div
