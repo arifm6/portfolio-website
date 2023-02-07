@@ -34,7 +34,7 @@ export default function ContactMe({}: Props) {
     <div className="h-screen pt-20 overflow-hidden">
       {" "}
       <h3 className="sectionHeading ">Contact</h3>
-      <div className="flex  flex-col items-center justify-start h-[calc(100vh_-_8rem)] space-y-10 text-center md:text-left max-w-7xl px-10 mx-auto">
+      <div className="flex flex-col items-center justify-start h-[calc(100vh_-_8rem)] space-y-10 text-center md:text-left max-w-7xl px-10 mx-auto overflow-y-scroll scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
         <div className="pt-8 flex flex-col items-center justify-evenly space-y-5 2xl:space-y-10 w-full">
           <h4 className="text-lg sm:text-2xl 2xl:text-4xl font-semibold text-center ">
             Feel free to ask me anything!
