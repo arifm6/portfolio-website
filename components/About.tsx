@@ -20,8 +20,8 @@ export default function About({}: Props) {
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.25 }}
           viewport={{ once: true }}
-          src="./ahmad-arif-cringe-picture.jpg"
-          alt=""
+          src="./ahmad-arif-cringe-picture.jpeg"
+          alt="cringe picture of me"
           className="w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px]"
         />
         <div className="space-y-4  md:px-10 w-full px-4 overflow-y-auto h-[calc(100vh_-_26rem)] text-center md:text-left md:h-auto scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 ">
