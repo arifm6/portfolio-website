@@ -48,7 +48,7 @@ export default function Home() {
               width={40}
               height={40}
               className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer transition duration-300"
-              src="/ahmad-arif-headshot.png  "
+              src="/ahmad-arif-headshot.png"
               alt="Home Button"
             />
             <HiOutlineArrowUp
