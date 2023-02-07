@@ -2,6 +2,7 @@ import React from "react";
 import BackgroundCircles from "./BackgroundCircles";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import Link from "next/link";
+import Image from "next/image";
 type Props = {};
 
 export default function Hero({}: Props) {
@@ -17,9 +18,12 @@ export default function Hero({}: Props) {
   return (
     <article className="h-screen flex flex-col items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
-      <img
+      <Image
+        priority={true}
+        width={128}
+        height={128}
         className="relative rounded-full w-32 h-32 mx-auto object-cover"
-        src="./ahmad-arif-headshot.png"
+        src="/ahmad-arif-headshot.png"
         alt="ahmad arif's headshot"
       />
 

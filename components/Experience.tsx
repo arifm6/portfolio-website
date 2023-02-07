@@ -28,7 +28,7 @@ export default function Experience({}: Props) {
   const Experiences = [
     {
       company: "AL Concrete",
-      companyLogo: "./alconcrete-logo.png",
+      companyLogo: "/alconcrete-logo.png",
       jobTitle: "Web Developer",
       tools: [
         <FaReact className="h-14 w-14 text-[#61DBFB]" key={0} />,

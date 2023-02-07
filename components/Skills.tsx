@@ -16,6 +16,7 @@ import {
   SiAdobephotoshop,
   SiOpengl,
 } from "react-icons/si";
+import Image from "next/image";
 
 type Props = {};
 
@@ -43,24 +44,36 @@ export default function Skills({}: Props) {
     {
       toolName: "Python",
       skillIcon: (
-        <img src="./python-logo.png" alt="Python Logo" className="bg-white" />
+        <Image
+          fill
+          src="/python-logo.png"
+          alt="Python Logo"
+          className="bg-white"
+        />
       ),
     },
     {
       toolName: "Java",
       skillIcon: (
-        <img src="./java-logo.png" alt="Java Logo" className="bg-white" />
+        <Image fill src="/java-logo.png" alt="Java Logo" className="bg-white" />
       ),
     },
     {
       toolName: "C++",
       skillIcon: (
-        <img src="./cplusplus-logo.png" alt="C++ Logo" className="bg-white" />
+        <Image
+          fill
+          src="/cplusplus-logo.png"
+          alt="C++ Logo"
+          className="bg-white"
+        />
       ),
     },
     {
       toolName: "C",
-      skillIcon: <img src="./c-logo.png" alt="C Logo" className="bg-white" />,
+      skillIcon: (
+        <Image fill src="/c-logo.png" alt="C Logo" className="bg-white" />
+      ),
     },
     {
       toolName: "PHP",
@@ -82,12 +95,12 @@ export default function Skills({}: Props) {
     },
     {
       toolName: "SQL",
-      skillIcon: <img src="sql-logo.png" alt="SQL Logo" />,
+      skillIcon: <Image fill src="/sql-logo.png" alt="SQL Logo" />,
     },
 
     {
       toolName: "Photoshop",
-      skillIcon: <img src="photoshop-logo.webp" alt="Photoshop Logo" />,
+      skillIcon: <Image fill src="/photoshop-logo.webp" alt="Photoshop Logo" />,
     },
     {
       toolName: "OpenGL",

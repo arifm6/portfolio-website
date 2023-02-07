@@ -43,10 +43,13 @@ export default function Home() {
       <Link href="#hero">
         <footer className="sticky bottom-5 cursor-pointer z-[100] group w-[5rem] mx-auto">
           <div className="flex items-center justify-center mx-auto ">
-            <img
+            <Image
+              priority
+              width={40}
+              height={40}
               className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer transition duration-300"
-              src="./ahmad-arif-headshot.png  "
-              alt=""
+              src="/ahmad-arif-headshot.png  "
+              alt="Home Button"
             />
             <HiOutlineArrowUp
               className="h-10 w-10 absolute ml-[5rem] scale-0 group-hover:scale-100 transition-transform duration-200"

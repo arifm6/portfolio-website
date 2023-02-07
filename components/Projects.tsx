@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
 import { SiNextdotjs, SiReact, SiRedux, SiTailwindcss } from "react-icons/si";
 import { FaStripe } from "react-icons/fa";
 import Project from "./Project";
+import Image from "next/image";
 
 type Props = {};
 
@@ -9,41 +9,60 @@ export default function Projects({}: Props) {
   const projects = [
     {
       projectDemo: "https://amazon-clone-arifm6.vercel.app/",
-      projectImage: <img src="amazon-project.png" className="w-full h-full" />,
+      projectImage: (
+        <Image
+          width={1400}
+          height={1000}
+          src="/amazon-project.png"
+          alt="amazon project on different devices"
+          className="w-full h-full"
+        />
+      ),
       projectName: "Amazon Clone",
       projectDescription:
         ' A simple mock amazon clone that allows simulates some of the experience found on amazon. This website allows user login, checkout (including payment processing), and more! Note your computer may give a security error because the website name includes "amazon" which is flagged by most web browsers',
       projectTools: [
         <SiNextdotjs fill="white" key={0} />,
         <SiRedux fill="#764abc" key={1} />,
-        <img
-          src="firebase-logo.png"
+        <Image
+          width={48}
+          height={48}
+          src="/firebase-logo.png"
           alt="Firebase"
-          className="object-contain"
           key={2}
         />,
         <SiTailwindcss color="#38bdf8" key={3} />,
-        <img
-          src="next-auth-logo.png"
+        <Image
+          width={48}
+          height={48}
+          src="/next-auth-logo.png"
           alt="Next-Auth"
-          className="object-contain"
           key={4}
         />,
       ],
     },
     {
       projectDemo: "https://netflix-clone-45ea5.web.app/",
-      projectImage: <img src="netflix-project.png" className="w-full h-full" />,
+      projectImage: (
+        <Image
+          width={1400}
+          height={1000}
+          src="/netflix-project.png"
+          alt="Netflix project on different devices"
+          className="w-full h-full"
+        />
+      ),
       projectName: "Netflix Clone",
       projectDescription:
         " A simple mock netflix clone that simulates some of the experiences found on netflix. This includes using an API to display movie recommendations, user account creation and login, user subscription, and more!",
       projectTools: [
         <SiReact color="#61DBFB" key={0} />,
         <SiRedux fill="#764abc" key={1} />,
-        <img
-          src="firebase-logo.png"
+        <Image
+          width={48}
+          height={48}
+          src="/firebase-logo.png"
           alt="Firebase"
-          className="object-contain"
           key={2}
         />,
         <FaStripe fill="#008cdd" key={3} />,
