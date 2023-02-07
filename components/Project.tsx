@@ -30,7 +30,7 @@ export default function Project({
       className="w-screen flex-shrink-0 snap-center flex flex-col space-y-4  items-center justify-start sm:px-20 md:px-44 h-full z-20 "
     >
       <motion.a
-        initial={{ y: -100, opacity: 0 }}
+        initial={{ y: -80, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.5 }}
         viewport={{ once: true }}
