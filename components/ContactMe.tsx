@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { EnvelopeIcon } from "@heroicons/react/24/solid";
 import { useForm, SubmitHandler } from "react-hook-form";
 
@@ -11,8 +11,23 @@ type Inputs = {
   message: string;
 };
 export default function ContactMe({}: Props) {
+  //state of 0 for not submitted, 1 for submitted, 2 for otherwise for error
+  const [submitted, setSubmitted] = useState(0);
   const { register, handleSubmit } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (formData) => console.log(formData);
+  const onSubmit: SubmitHandler<Inputs> = async (formData) => {
+    try {
+      await fetch("api/sendgrid", {
+        method: "post",
+        body: JSON.stringify(formData),
+      }).then((response) => {
+        console.log(response);
+        setSubmitted(1);
+      });
+    } catch (error) {
+      //error code here
+      setSubmitted(2);
+    }
+  };
 
   return (
     <div className="h-screen pt-20 overflow-hidden">
@@ -46,6 +61,7 @@ export default function ContactMe({}: Props) {
               className="contactInput"
               type="email"
               placeholder="Email"
+              required
             />
           </div>
           <input
@@ -58,12 +74,18 @@ export default function ContactMe({}: Props) {
             {...register("message")}
             className="contactInput"
             placeholder="Message"
+            required
           ></textarea>
           <button
+            disabled={submitted != 0}
             type="submit"
             className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg"
           >
-            Submit
+            {submitted === 0
+              ? "Submit"
+              : submitted === 1
+              ? "Form submitted"
+              : "Error, please try again later"}
           </button>
         </form>
       </div>
