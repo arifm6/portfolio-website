@@ -1,8 +1,13 @@
-import { motion } from "framer-motion";
-import React from "react";
+import { motion, useInView } from "framer-motion";
+import React, { useRef, useState } from "react";
 import Skill from "./Skill";
 import { AiFillHtml5, AiFillGithub } from "react-icons/ai";
-import { IoLogoCss3, IoLogoJavascript, IoLogoPython } from "react-icons/io";
+import {
+  IoIosMore,
+  IoLogoCss3,
+  IoLogoJavascript,
+  IoLogoPython,
+} from "react-icons/io";
 import {
   SiTypescript,
   SiReact,
@@ -11,11 +16,13 @@ import {
   SiAdobephotoshop,
   SiOpengl,
 } from "react-icons/si";
-import { CiCircleMore } from "react-icons/ci";
 
 type Props = {};
 
 export default function Skills({}: Props) {
+  const skillsRef = useRef(null);
+  const skillsIsInView = useInView(skillsRef, { once: true });
+
   const skills = [
     {
       toolName: "HTML5",
@@ -86,30 +93,32 @@ export default function Skills({}: Props) {
       toolName: "OpenGL",
       skillIcon: <SiOpengl fill="#283A57" className="bg-white" />,
     },
-    { toolName: "and more!", skillIcon: <CiCircleMore /> },
+    {
+      toolName: "and more!",
+      skillIcon: <IoIosMore />,
+    },
   ];
+  const animationDirection = (i: number) => {
+    return i >= 8 ? true : false;
+  };
   return (
-    <motion.article
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1.5 }}
-      viewport={{ once: true }}
-      className="h-screen pt-20 overflow-visible"
-    >
+    <article className="h-screen pt-20 overflow-visible" ref={skillsRef}>
       <h3 className="sectionHeading">Skills</h3>
       <div className="flex items-center justify-center h-[calc(100vh_-_8rem)] z-20">
-        <div className="grid grid-cols-4 gap-1 sm:gap-5  ">
+        <div className="grid grid-cols-4 gap-2 sm:gap-5  ">
           {skills.map((skill, i) => {
             return (
               <Skill
                 key={i}
                 skillIcon={skill.skillIcon}
                 toolName={skill.toolName}
+                directionLeft={animationDirection(i)}
+                isInView={skillsIsInView}
               />
             );
           })}
         </div>
       </div>
-    </motion.article>
+    </article>
   );
 }

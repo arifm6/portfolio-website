@@ -5,16 +5,22 @@ type Props = {
   directionLeft?: boolean;
   skillIcon: any;
   toolName: string;
+  isInView: boolean;
 };
 
-export default function Skill({ directionLeft, skillIcon, toolName }: Props) {
+export default function Skill({
+  directionLeft,
+  skillIcon,
+  toolName,
+  isInView,
+}: Props) {
   return (
     <motion.div
       initial={{ x: directionLeft ? -200 : 200, opacity: 0 }}
-      whileInView={{ x: 0, opacity: 1 }}
+      animate={isInView && { x: 0, opacity: 1 }}
       transition={{ duration: 1.5 }}
       viewport={{ once: true }}
-      className="group relative flex cursor-pointer skill-size"
+      className="group relative flex cursor-pointer skill-size overflow-hidden"
     >
       <div className="[&>*]:skillIcon w-full h-full scale-90 group-hover:scale-110 transition-transform duration-300 ease-in-out ">
         {skillIcon}

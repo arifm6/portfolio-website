@@ -8,7 +8,7 @@ import Skills from "components/Skills";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-
+import { HiOutlineArrowUp } from "react-icons/hi";
 export default function Home() {
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 ">
@@ -34,19 +34,23 @@ export default function Home() {
       <section id="skills" className="snap-start">
         <Skills />
       </section>
-      <section id="projects" className="snap-start">
+      <section id="projects" className="snap-start z-20">
         <Projects />
       </section>
       <section id="contact" className="snap-start">
         <ContactMe />
       </section>
       <Link href="#hero">
-        <footer className="sticky bottom-5 w-full cursor-pointer">
+        <footer className="sticky bottom-5 w-full cursor-pointer z-[100] group">
           <div className="flex items-center justify-center">
             <img
-              className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
-              src="./mememan.jpeg"
+              className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer transition duration-300"
+              src="./ahmad-arif-headshot.png  "
               alt=""
+            />
+            <HiOutlineArrowUp
+              className="h-10 w-10 absolute ml-[5rem] scale-0 group-hover:scale-100 transition-transform duration-200"
+              color="#F0DB4F"
             />
           </div>
         </footer>
