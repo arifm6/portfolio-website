@@ -16,7 +16,7 @@ export default function Home() {
         <title>Ahmad Arif Portfolio Website</title>
         <meta name="description" content="Ahmad Arif's Personal Website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="./mememan.jpeg" />
+        <link rel="icon" href="./ahmad-arif-headshot.png" />
       </Head>
 
       {/**Header */}

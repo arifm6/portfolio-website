@@ -55,7 +55,6 @@ export default function Experience({}: Props) {
         "Deployed website landing page and updated and maintained any changes per client request",
       ],
     },
-    { jobTitle: "" },
   ];
   return (
     <article className="h-screen pt-20 overflow-hidden ">

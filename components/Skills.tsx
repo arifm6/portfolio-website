@@ -9,7 +9,9 @@ import {
   SiNextdotjs,
   SiPhp,
   SiAdobephotoshop,
+  SiOpengl,
 } from "react-icons/si";
+import { CiCircleMore } from "react-icons/ci";
 
 type Props = {};
 
@@ -72,9 +74,19 @@ export default function Skills({}: Props) {
       skillIcon: <SiNextdotjs color="black" className="bg-white" />,
     },
     {
-      toolName: "Photoshop",
-      skillIcon: <img src="photoshop-logo.webp" alt="" />,
+      toolName: "SQL",
+      skillIcon: <img src="sql-logo.png" alt="SQL Logo" />,
     },
+
+    {
+      toolName: "Photoshop",
+      skillIcon: <img src="photoshop-logo.webp" alt="Photoshop Logo" />,
+    },
+    {
+      toolName: "OpenGL",
+      skillIcon: <SiOpengl fill="#283A57" className="bg-white" />,
+    },
+    { toolName: "and more!", skillIcon: <CiCircleMore /> },
   ];
   return (
     <motion.article
