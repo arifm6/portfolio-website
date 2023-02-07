@@ -15,18 +15,19 @@ export default function ContactMe({}: Props) {
   const [submitted, setSubmitted] = useState(0);
   const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = async (formData) => {
-    try {
-      await fetch("api/sendgrid", {
-        method: "post",
-        body: JSON.stringify(formData),
-      }).then((response) => {
-        console.log(response);
+    await fetch("api/sendgrid", {
+      method: "post",
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Form submitted");
         setSubmitted(1);
+      })
+      .catch((error) => {
+        console.log("Error: " + error);
+        setSubmitted(2);
       });
-    } catch (error) {
-      //error code here
-      setSubmitted(2);
-    }
   };
 
   return (
