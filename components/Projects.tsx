@@ -8,6 +8,28 @@ type Props = {};
 export default function Projects({}: Props) {
   const projects = [
     {
+      projectDemo: "https://pathfinding-visualizer-alpha.vercel.app/",
+      projectImage: (
+        <Image
+          width={1400}
+          height={1000}
+          src="/pathfinding-project.png"
+          alt="pathfinding project on different devices"
+          className="w-full h-full"
+        />
+      ),
+      projectName: "Pathfinding Visualizer",
+      projectDescription:
+        " A beautiful pathfinding visualization web app that supports various pathfinding algorithms, maze generation algorithms, obstacles, weights, and more.",
+      projectTools: [
+        <SiReact color="#61DBFB" key={0} />,
+        <SiRedux fill="#764abc" key={1} />,
+
+        <SiTailwindcss color="#38bdf8" key={2} />,
+      ],
+    },
+
+    {
       projectDemo: "https://amazon-clone-arifm6.vercel.app/",
       projectImage: (
         <Image
