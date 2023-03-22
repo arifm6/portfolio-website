@@ -1,4 +1,10 @@
-import { SiNextdotjs, SiReact, SiRedux, SiTailwindcss } from "react-icons/si";
+import {
+  SiNextdotjs,
+  SiReact,
+  SiRedux,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
 import { FaStripe } from "react-icons/fa";
 import Project from "./Project";
 import Image from "next/image";
@@ -24,6 +30,31 @@ export default function Projects({}: Props) {
       projectTools: [
         <SiReact color="#61DBFB" key={0} />,
         <SiRedux fill="#764abc" key={1} />,
+
+        <SiTailwindcss color="#38bdf8" key={2} />,
+      ],
+    },
+    {
+      projectDemo: "https://sorting-visualizer-arifm6.vercel.app//",
+      projectImage: (
+        <Image
+          width={1400}
+          height={1000}
+          src="/sorting-project.png"
+          alt="sorting project"
+          className="w-full h-full"
+        />
+      ),
+      projectName: "Sorting Visualizer",
+      projectDescription:
+        " A beautiful sorting visualization web app that supports various sorting algorithms, animation speeds, array sizes, and more.",
+      projectTools: [
+        <SiTypescript
+          className="bg-white rounded-md"
+          color="#007acc"
+          key={0}
+        />,
+        <SiNextdotjs fill="white" key={1} />,
 
         <SiTailwindcss color="#38bdf8" key={2} />,
       ],
