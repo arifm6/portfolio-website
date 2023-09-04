@@ -33,8 +33,8 @@ export default function ExperienceCard({
         <Image
           width={128}
           height={128}
-          className="w-24 h-24 sm:w-32 sm:h-32 rounded-full object-fit "
-          src={companyLogo || "./mememan.jpeg"}
+          className="w-24 h-24 sm:w-32 sm:h-32 rounded-xl object-fit "
+          src={companyLogo || "/../public/generic-company-logo.png"}
           alt={`${company} logo`}
         />
       </motion.div>
