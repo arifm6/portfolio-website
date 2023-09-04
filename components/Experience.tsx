@@ -58,10 +58,11 @@ export default function Experience({}: Props) {
         to: "Present"
       },
       jobDuties: [
-        "Built wireframes and mock designs for a website landing page. This includes page layout, colour scheme,and any necessary features for the business.",
-        "Developed user interfaces with modern JavaScript libraries/frameworks (React/NextJS), HTML5, andCSS3, which greatly improved page performance.",
-        "Created a mobile responsive user experience with CSS Flexbox and CSS grid allowing web access fromvarying screen sizes",
-        "Deployed website landing page and updated and maintained any changes per client request",
+        "Taught students about core programming concepts using JavaScript, Python, Unity, and more.",
+        "Aid students in solving debugging issues and achieve critical problem-solving skills to become more self-sufficient.",
+        "Troubleshoot hardware technical errors and provide IT assistance to ensure students and learning center can operate efficiently.",
+        "Provide network and hardware support to protect devices from malicious external and internal threats.",
+        "Collaborated with a team of colleagues and coordinated center activities to ensure well-structured learning lessons and teaching operation."
       ],
     },
     {
@@ -91,10 +92,11 @@ export default function Experience({}: Props) {
           new Date("August 2022").getFullYear(),
       },
       jobDuties: [
-        "Built wireframes and mock designs for a website landing page. This includes page layout, colour scheme,and any necessary features for the business.",
-        "Developed user interfaces with modern JavaScript libraries/frameworks (React/NextJS), HTML5, andCSS3, which greatly improved page performance.",
-        "Created a mobile responsive user experience with CSS Flexbox and CSS grid allowing web access fromvarying screen sizes",
+        "Built wireframes and mock designs for a website landing page. This includes page layout, colour scheme, and any necessary features for the business.",
+        "Developed user interfaces with modern JavaScript libraries/frameworks (React/NextJS), HTML5, and CSS3, which greatly improved page performance.",
+        "Created a mobile responsive user experience with CSS Flexbox and CSS grid allowing web access from varying screen sizes",
         "Deployed website landing page and updated and maintained any changes per client request",
+        "Maintained client business pages, provided IT support with various existing systems, and handled marketing and promotions within the business."
       ],
     },
   ];
