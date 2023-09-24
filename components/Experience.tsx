@@ -80,7 +80,7 @@ export default function Experience({}: Props) {
     {
       company: "Code Ninjas",
       jobTitle: "Coding Instructor",
-      companyLogo: "/../public/code-ninjas-logo.png",
+      companyLogo: "/code-ninjas-logo.png",
       tools: [
         <IoLogoJavascript
           className="h-14 w-14 bg-[#F0DB4F]"
