@@ -37,7 +37,7 @@ export default function Experience({}: Props) {
     {
       company: "Jayiza",
       jobTitle: "Frontend Engineer",
-      companyLogo: "/jayiza-logo.png",
+      companyLogo: "/jayiza-logo.svg",
       tools: [
         <SiNextdotjs
           color="black"
