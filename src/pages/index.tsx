@@ -8,6 +8,7 @@ import Skills from "components/Skills";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 import { HiOutlineArrowUp } from "react-icons/hi";
 export default function Home() {
   return (
@@ -17,6 +18,18 @@ export default function Home() {
         <meta name="description" content="Ahmad Arif's Personal Website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="./ahmad-arif-headshot.png" />
+        <Script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+        />
+
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');`}
+        </Script>
       </Head>
 
       {/**Header */}
